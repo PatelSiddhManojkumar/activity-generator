@@ -2,3 +2,4 @@ Improved performance of the database queries.
 Improved performance of the database queries.
 Added unit tests for the new feature.
 Updated dependencies to the latest versions.
+Optimized image loading on the homepage.

@@ -1,1 +1,2 @@
 Improved performance of the database queries.
+Improved performance of the database queries.

@@ -1,2 +1,3 @@
 Improved performance of the database queries.
 Improved performance of the database queries.
+Added unit tests for the new feature.

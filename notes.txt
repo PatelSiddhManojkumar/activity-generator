@@ -16,3 +16,4 @@ Updated documentation for the API endpoints.
 Implemented caching for faster load times.
 Fixed typos in the README file.
 Implemented caching for faster load times.
+Added unit tests for the new feature.

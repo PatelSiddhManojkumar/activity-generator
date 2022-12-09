@@ -19,3 +19,4 @@ Implemented caching for faster load times.
 Added unit tests for the new feature.
 Fixed typos in the README file.
 Fixed a bug in the payment processing function.
+Added unit tests for the new feature.

@@ -32,3 +32,4 @@ Optimized image loading on the homepage.
 Fixed typos in the README file.
 Enhanced security for the application.
 Optimized image loading on the homepage.
+Updated documentation for the API endpoints.

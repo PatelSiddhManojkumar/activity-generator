@@ -47,3 +47,4 @@ Optimized image loading on the homepage.
 Optimized image loading on the homepage.
 Enhanced security for the application.
 Improved performance of the database queries.
+Fixed typos in the README file.

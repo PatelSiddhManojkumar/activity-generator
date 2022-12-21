@@ -50,3 +50,4 @@ Improved performance of the database queries.
 Fixed typos in the README file.
 Updated dependencies to the latest versions.
 Refactored the user authentication module.
+Implemented caching for faster load times.

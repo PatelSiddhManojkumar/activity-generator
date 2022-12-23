@@ -57,3 +57,4 @@ Fixed typos in the README file.
 Updated documentation for the API endpoints.
 Enhanced security for the application.
 Enhanced security for the application.
+Implemented caching for faster load times.

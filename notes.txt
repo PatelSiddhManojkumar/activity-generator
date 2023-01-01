@@ -77,3 +77,4 @@ Improved performance of the database queries.
 Updated dependencies to the latest versions.
 Enhanced security for the application.
 Refactored the user authentication module.
+Updated documentation for the API endpoints.

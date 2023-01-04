@@ -86,3 +86,4 @@ Implemented caching for faster load times.
 Optimized image loading on the homepage.
 Optimized image loading on the homepage.
 Enhanced security for the application.
+Updated dependencies to the latest versions.

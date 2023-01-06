@@ -94,3 +94,4 @@ Optimized image loading on the homepage.
 Enhanced security for the application.
 Optimized image loading on the homepage.
 Fixed a bug in the payment processing function.
+Fixed typos in the README file.

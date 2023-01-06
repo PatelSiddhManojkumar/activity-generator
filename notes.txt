@@ -91,3 +91,4 @@ Fixed typos in the README file.
 Updated documentation for the API endpoints.
 Updated documentation for the API endpoints.
 Optimized image loading on the homepage.
+Enhanced security for the application.

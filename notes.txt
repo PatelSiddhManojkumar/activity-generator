@@ -98,3 +98,4 @@ Fixed typos in the README file.
 Fixed typos in the README file.
 Optimized image loading on the homepage.
 Updated documentation for the API endpoints.
+Fixed typos in the README file.

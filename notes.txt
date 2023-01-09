@@ -100,3 +100,4 @@ Optimized image loading on the homepage.
 Updated documentation for the API endpoints.
 Fixed typos in the README file.
 Implemented caching for faster load times.
+Updated dependencies to the latest versions.

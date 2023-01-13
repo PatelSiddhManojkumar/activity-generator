@@ -105,3 +105,4 @@ Fixed a bug in the payment processing function.
 Updated dependencies to the latest versions.
 Fixed typos in the README file.
 Fixed a bug in the payment processing function.
+Fixed typos in the README file.

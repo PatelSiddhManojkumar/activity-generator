@@ -143,3 +143,4 @@ Updated documentation for the API endpoints.
 Updated dependencies to the latest versions.
 Refactored the user authentication module.
 Improved performance of the database queries.
+Optimized image loading on the homepage.

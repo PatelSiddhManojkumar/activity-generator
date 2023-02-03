@@ -155,3 +155,4 @@ Added unit tests for the new feature.
 Implemented caching for faster load times.
 Fixed typos in the README file.
 Fixed a bug in the payment processing function.
+Updated documentation for the API endpoints.

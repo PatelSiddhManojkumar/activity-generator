@@ -159,3 +159,4 @@ Updated documentation for the API endpoints.
 Updated dependencies to the latest versions.
 Enhanced security for the application.
 Updated documentation for the API endpoints.
+Refactored the user authentication module.

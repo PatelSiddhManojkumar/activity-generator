@@ -167,3 +167,4 @@ Updated documentation for the API endpoints.
 Refactored the user authentication module.
 Fixed typos in the README file.
 Optimized image loading on the homepage.
+Fixed typos in the README file.

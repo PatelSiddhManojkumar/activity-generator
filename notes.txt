@@ -171,3 +171,4 @@ Fixed typos in the README file.
 Fixed a bug in the payment processing function.
 Fixed a bug in the payment processing function.
 Optimized image loading on the homepage.
+Updated dependencies to the latest versions.

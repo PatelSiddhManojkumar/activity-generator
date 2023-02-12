@@ -175,3 +175,4 @@ Updated dependencies to the latest versions.
 Updated dependencies to the latest versions.
 Updated documentation for the API endpoints.
 Added unit tests for the new feature.
+Optimized image loading on the homepage.

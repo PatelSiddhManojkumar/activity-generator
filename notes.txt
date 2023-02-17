@@ -191,3 +191,4 @@ Updated dependencies to the latest versions.
 Improved performance of the database queries.
 Improved performance of the database queries.
 Implemented caching for faster load times.
+Added unit tests for the new feature.

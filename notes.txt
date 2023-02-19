@@ -195,3 +195,4 @@ Added unit tests for the new feature.
 Implemented caching for faster load times.
 Fixed typos in the README file.
 Enhanced security for the application.
+Updated documentation for the API endpoints.

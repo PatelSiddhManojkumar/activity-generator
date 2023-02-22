@@ -203,3 +203,4 @@ Implemented caching for faster load times.
 Improved performance of the database queries.
 Implemented caching for faster load times.
 Updated dependencies to the latest versions.
+Fixed typos in the README file.

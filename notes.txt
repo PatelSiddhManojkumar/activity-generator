@@ -218,3 +218,4 @@ Enhanced security for the application.
 Enhanced security for the application.
 Updated dependencies to the latest versions.
 Fixed typos in the README file.
+Updated documentation for the API endpoints.

@@ -239,3 +239,4 @@ Updated dependencies to the latest versions.
 Improved performance of the database queries.
 Fixed typos in the README file.
 Implemented caching for faster load times.
+Updated documentation for the API endpoints.

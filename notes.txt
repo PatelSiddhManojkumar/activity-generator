@@ -240,3 +240,4 @@ Improved performance of the database queries.
 Fixed typos in the README file.
 Implemented caching for faster load times.
 Updated documentation for the API endpoints.
+Added unit tests for the new feature.

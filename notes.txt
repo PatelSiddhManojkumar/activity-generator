@@ -275,3 +275,4 @@ Updated dependencies to the latest versions.
 Updated dependencies to the latest versions.
 Optimized image loading on the homepage.
 Enhanced security for the application.
+Updated documentation for the API endpoints.

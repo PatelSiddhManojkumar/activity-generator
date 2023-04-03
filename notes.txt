@@ -314,3 +314,4 @@ Fixed typos in the README file.
 Improved performance of the database queries.
 Refactored the user authentication module.
 Improved performance of the database queries.
+Updated documentation for the API endpoints.

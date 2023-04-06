@@ -320,3 +320,4 @@ Added unit tests for the new feature.
 Fixed typos in the README file.
 Improved performance of the database queries.
 Fixed typos in the README file.
+Updated documentation for the API endpoints.

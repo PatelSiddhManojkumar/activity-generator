@@ -323,3 +323,4 @@ Fixed typos in the README file.
 Updated documentation for the API endpoints.
 Implemented caching for faster load times.
 Refactored the user authentication module.
+Updated documentation for the API endpoints.

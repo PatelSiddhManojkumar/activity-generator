@@ -357,3 +357,4 @@ Refactored the user authentication module.
 Updated documentation for the API endpoints.
 Enhanced security for the application.
 Fixed a bug in the payment processing function.
+Optimized image loading on the homepage.

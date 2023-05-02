@@ -386,3 +386,4 @@ Improved performance of the database queries.
 Updated documentation for the API endpoints.
 Implemented caching for faster load times.
 Refactored the user authentication module.
+Fixed typos in the README file.

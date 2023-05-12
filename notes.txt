@@ -415,3 +415,4 @@ Improved performance of the database queries.
 Implemented caching for faster load times.
 Fixed a bug in the payment processing function.
 Improved performance of the database queries.
+Fixed typos in the README file.

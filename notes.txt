@@ -464,3 +464,4 @@ Enhanced security for the application.
 Refactored the user authentication module.
 Updated dependencies to the latest versions.
 Updated documentation for the API endpoints.
+Optimized image loading on the homepage.

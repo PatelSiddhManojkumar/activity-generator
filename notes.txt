@@ -486,3 +486,4 @@ Updated dependencies to the latest versions.
 Updated documentation for the API endpoints.
 Updated dependencies to the latest versions.
 Updated dependencies to the latest versions.
+Fixed a bug in the payment processing function.

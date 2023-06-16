@@ -504,3 +504,4 @@ Optimized image loading on the homepage.
 Updated documentation for the API endpoints.
 Fixed a bug in the payment processing function.
 Refactored the user authentication module.
+Added unit tests for the new feature.

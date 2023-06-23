@@ -525,3 +525,4 @@ Fixed typos in the README file.
 Optimized image loading on the homepage.
 Enhanced security for the application.
 Enhanced security for the application.
+Added unit tests for the new feature.

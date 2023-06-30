@@ -542,3 +542,4 @@ Updated dependencies to the latest versions.
 Fixed typos in the README file.
 Updated dependencies to the latest versions.
 Fixed a bug in the payment processing function.
+Added unit tests for the new feature.

@@ -569,3 +569,4 @@ Implemented caching for faster load times.
 Improved performance of the database queries.
 Improved performance of the database queries.
 Updated dependencies to the latest versions.
+Fixed typos in the README file.

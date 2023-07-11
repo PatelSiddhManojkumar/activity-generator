@@ -573,3 +573,4 @@ Fixed typos in the README file.
 Optimized image loading on the homepage.
 Improved performance of the database queries.
 Optimized image loading on the homepage.
+Refactored the user authentication module.

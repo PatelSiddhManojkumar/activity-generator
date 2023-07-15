@@ -584,3 +584,4 @@ Optimized image loading on the homepage.
 Added unit tests for the new feature.
 Enhanced security for the application.
 Refactored the user authentication module.
+Updated documentation for the API endpoints.

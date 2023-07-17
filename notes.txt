@@ -592,3 +592,4 @@ Updated dependencies to the latest versions.
 Optimized image loading on the homepage.
 Added unit tests for the new feature.
 Added unit tests for the new feature.
+Fixed typos in the README file.

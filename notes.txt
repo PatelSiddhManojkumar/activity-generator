@@ -599,3 +599,4 @@ Fixed typos in the README file.
 Enhanced security for the application.
 Updated documentation for the API endpoints.
 Updated documentation for the API endpoints.
+Refactored the user authentication module.

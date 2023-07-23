@@ -607,3 +607,4 @@ Refactored the user authentication module.
 Improved performance of the database queries.
 Added unit tests for the new feature.
 Updated documentation for the API endpoints.
+Updated documentation for the API endpoints.

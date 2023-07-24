@@ -608,3 +608,4 @@ Improved performance of the database queries.
 Added unit tests for the new feature.
 Updated documentation for the API endpoints.
 Updated documentation for the API endpoints.
+Fixed typos in the README file.

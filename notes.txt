@@ -616,3 +616,4 @@ Fixed typos in the README file.
 Improved performance of the database queries.
 Fixed typos in the README file.
 Added unit tests for the new feature.
+Updated documentation for the API endpoints.

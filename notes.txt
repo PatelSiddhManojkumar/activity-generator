@@ -636,3 +636,4 @@ Updated documentation for the API endpoints.
 Fixed a bug in the payment processing function.
 Enhanced security for the application.
 Fixed typos in the README file.
+Fixed typos in the README file.

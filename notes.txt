@@ -640,3 +640,4 @@ Fixed typos in the README file.
 Implemented caching for faster load times.
 Fixed typos in the README file.
 Fixed typos in the README file.
+Optimized image loading on the homepage.

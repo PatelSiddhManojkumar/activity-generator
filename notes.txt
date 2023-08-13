@@ -653,3 +653,4 @@ Fixed a bug in the payment processing function.
 Updated documentation for the API endpoints.
 Refactored the user authentication module.
 Updated documentation for the API endpoints.
+Fixed typos in the README file.

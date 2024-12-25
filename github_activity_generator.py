@@ -7,7 +7,8 @@ from datetime import datetime, timedelta
 from git import Repo, GitCommandError
 
 # Configuration
-REPO_PATH = "E:/pro/activity-generator"  # Path to your Git repository
+# Set the path to your local Git repository here
+REPO_PATH = "E:/pro/activity-generator"  # Change this to your repository path
 COMMIT_INTERVAL = 60  # Interval between commits in seconds
 SCHEDULE_INTERVAL = 1  # Interval between scheduled commits in minutes
 FAKE_FILE_PATH = "fake_file.txt"  # Path to the fake file for commits

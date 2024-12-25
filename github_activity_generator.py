@@ -101,7 +101,7 @@ if __name__ == "__main__":
             sys.exit(1)
         days_ago = int(sys.argv[2])
         num_commits = int(sys.argv[3])
-        make_past_commit(days_ago, num_commits)
+        make_past_commit(days_ago, num_commits) # type: ignore
     elif command == "schedule":
         schedule.every(SCHEDULE_INTERVAL).minutes.do(schedule_commit)
         try:

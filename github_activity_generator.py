@@ -67,7 +67,10 @@ def make_past_commits_for_year():
     current_date = start_date
 
     while current_date <= end_date:
-        create_fake_commit(current_date)
+        num_commits = random.randint(1, 4)  # Random number of commits per day
+        for _ in range(num_commits):
+            commit_time = current_date + timedelta(hours=random.randint(0, 23), minutes=random.randint(0, 59))
+            create_fake_commit(commit_time)
         current_date += timedelta(days=1)
 
 def schedule_commit():
@@ -101,7 +104,7 @@ if __name__ == "__main__":
             sys.exit(1)
         days_ago = int(sys.argv[2])
         num_commits = int(sys.argv[3])
-        make_past_commit(days_ago, num_commits) # type: ignore
+        make_past_commit(days_ago, num_commits)
     elif command == "schedule":
         schedule.every(SCHEDULE_INTERVAL).minutes.do(schedule_commit)
         try:

@@ -7,13 +7,15 @@ from datetime import datetime, timedelta
 from git import Repo, GitCommandError
 
 # Configuration
-REPO_PATH = "E:/pro/activity-generator"  # Path to your Git repository
+# Set the path to your local Git repository here
+REPO_PATH = "E:/pro/activity-generator"  # Change this to your repository path
 COMMIT_INTERVAL = 60  # Interval between commits in seconds
 SCHEDULE_INTERVAL = 1  # Interval between scheduled commits in minutes
 FAKE_FILE_PATH = "fake_file.txt"  # Path to the fake file for commits
 
 # Initialize repository
 repo = Repo(REPO_PATH)
+
 
 def generate_fake_content():
     """Generate random content for fake commits."""
@@ -25,6 +27,7 @@ def generate_fake_content():
         "Nam tristique justo vitae est suscipit, nec laoreet felis porttitor."
     ]
     return random.choice(contents)
+
 
 def create_fake_commit(commit_time):
     """Create a fake commit with random content at a specific time."""
@@ -40,6 +43,7 @@ def create_fake_commit(commit_time):
         print(f"Committed: {commit_message}")
     except GitCommandError as e:
         print(f"Error committing changes: {e}")
+
 
 def start_commits():
     try:
@@ -60,18 +64,19 @@ def start_commits():
     except KeyboardInterrupt:
         print("Stopping commits...")
 
-def make_past_commits_for_year():
-    """Create commits for every day in the past year."""
+
+def make_past_commits(start_date, max_commits_per_day):
+    """Create commits for each day from the start date to today with random numbers of commits."""
     end_date = datetime.now()
-    start_date = end_date - timedelta(days=365)
     current_date = start_date
 
     while current_date <= end_date:
-        num_commits = random.randint(1, 4)  # Random number of commits per day
+        num_commits = random.randint(1, max_commits_per_day)  # Random number of commits per day
         for _ in range(num_commits):
             commit_time = current_date + timedelta(hours=random.randint(0, 23), minutes=random.randint(0, 59))
             create_fake_commit(commit_time)
         current_date += timedelta(days=1)
+
 
 def schedule_commit():
     if repo.is_dirty(untracked_files=True):
@@ -87,24 +92,26 @@ def schedule_commit():
         print("No real changes to commit. Creating a fake commit...")
         create_fake_commit(datetime.now())
 
+
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python github_activity_generator.py <start|stop|past|schedule|yearly> [options]")
         sys.exit(1)
 
     command = sys.argv[1].lower()
-    
+
     if command == "start":
         start_commits()
     elif command == "stop":
         print("To stop the script, use Ctrl+C.")
     elif command == "past":
         if len(sys.argv) != 4:
-            print("Usage: python github_activity_generator.py past <days_ago> <num_commits>")
+            print("Usage: python github_activity_generator.py past <start_date> <max_commits_per_day>")
             sys.exit(1)
-        days_ago = int(sys.argv[2])
-        num_commits = int(sys.argv[3])
-        make_past_commit(days_ago, num_commits)
+        start_date_str = sys.argv[2]
+        max_commits_per_day = int(sys.argv[3])
+        start_date = datetime.strptime(start_date_str, "%Y-%m-%d")
+        make_past_commits(start_date, max_commits_per_day)
     elif command == "schedule":
         schedule.every(SCHEDULE_INTERVAL).minutes.do(schedule_commit)
         try:
@@ -114,6 +121,6 @@ if __name__ == "__main__":
         except KeyboardInterrupt:
             print("Stopping scheduled commits...")
     elif command == "yearly":
-        make_past_commits_for_year()
+        make_past_commits(datetime.now() - timedelta(days=365), 4)
     else:
         print(f"Unknown command: {command}")

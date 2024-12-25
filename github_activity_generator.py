@@ -26,15 +26,16 @@ def generate_fake_content():
     ]
     return random.choice(contents)
 
-def create_fake_commit():
-    """Create a fake commit with random content."""
+def create_fake_commit(commit_time):
+    """Create a fake commit with random content at a specific time."""
     with open(os.path.join(REPO_PATH, FAKE_FILE_PATH), 'a') as fake_file:
         fake_content = generate_fake_content()
         fake_file.write(f"{fake_content}\n")
     repo.git.add(FAKE_FILE_PATH)
-    commit_message = f"Fake commit at {datetime.now()}: {fake_content[:30]}..."
+    commit_message = f"Fake commit at {commit_time}: {fake_content[:30]}..."
+    os.environ['GIT_COMMITTER_DATE'] = commit_time.strftime('%Y-%m-%d %H:%M:%S')
     try:
-        repo.git.commit(m=commit_message)
+        repo.git.commit(m=commit_message, date=commit_time)
         repo.git.push()  # Push the commit to the remote repository
         print(f"Committed: {commit_message}")
     except GitCommandError as e:
@@ -54,32 +55,20 @@ def start_commits():
                     print(f"Error committing changes: {e}")
             else:
                 print("No real changes to commit. Creating a fake commit...")
-                create_fake_commit()
+                create_fake_commit(datetime.now())
             time.sleep(COMMIT_INTERVAL)
     except KeyboardInterrupt:
         print("Stopping commits...")
 
-def make_past_commit(days_ago, num_commits):
-    for _ in range(num_commits):
-        random_hour = random.randint(0, 23)
-        random_minute = random.randint(0, 59)
-        commit_time = datetime.now() - timedelta(days=days_ago, hours=random_hour, minutes=random_minute)
-        if repo.is_dirty(untracked_files=True):
-            repo.git.add(A=True)
-            commit_message = f"Past commit at {commit_time}"
-        else:
-            with open(os.path.join(REPO_PATH, FAKE_FILE_PATH), 'a') as fake_file:
-                fake_content = generate_fake_content()
-                fake_file.write(f"{fake_content}\n")
-            repo.git.add(FAKE_FILE_PATH)
-            commit_message = f"Past fake commit at {commit_time}: {fake_content[:30]}..."
-        os.environ['GIT_COMMITTER_DATE'] = commit_time.strftime('%Y-%m-%d %H:%M:%S')
-        try:
-            repo.git.commit(m=commit_message, date=commit_time)
-            repo.git.push()  # Push the commit to the remote repository
-            print(f"Committed: {commit_message}")
-        except GitCommandError as e:
-            print(f"Error committing changes: {e}")
+def make_past_commits_for_year():
+    """Create commits for every day in the past year."""
+    end_date = datetime.now()
+    start_date = end_date - timedelta(days=365)
+    current_date = start_date
+
+    while current_date <= end_date:
+        create_fake_commit(current_date)
+        current_date += timedelta(days=1)
 
 def schedule_commit():
     if repo.is_dirty(untracked_files=True):
@@ -93,11 +82,11 @@ def schedule_commit():
             print(f"Error committing changes: {e}")
     else:
         print("No real changes to commit. Creating a fake commit...")
-        create_fake_commit()
+        create_fake_commit(datetime.now())
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python github_activity_generator.py <start|stop|past|schedule> [options]")
+        print("Usage: python github_activity_generator.py <start|stop|past|schedule|yearly> [options]")
         sys.exit(1)
 
     command = sys.argv[1].lower()
@@ -121,5 +110,7 @@ if __name__ == "__main__":
                 time.sleep(1)
         except KeyboardInterrupt:
             print("Stopping scheduled commits...")
+    elif command == "yearly":
+        make_past_commits_for_year()
     else:
         print(f"Unknown command: {command}")

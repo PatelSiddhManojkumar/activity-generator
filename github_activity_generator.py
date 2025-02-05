@@ -9,10 +9,7 @@ from git import Repo, GitCommandError
 # Configuration
 # Set the path to your local Git repository here
 REPO_PATH = "E:/pro/activity-generator"  # Change this to your repository path
-BRANCH_NAME = "auto-commits"             # Name of the sub-branch for fake commits
-COMMIT_INTERVAL = 60                     # Interval between commits in seconds
-SCHEDULE_INTERVAL = 5                    # Interval between scheduled commits in minutes
-FAKE_FILE_PATH = "notes.txt"             # Path to the fake file for commits
+main
 
 # Initialize repository
 repo = Repo(REPO_PATH)
